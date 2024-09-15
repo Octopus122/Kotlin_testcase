@@ -13,9 +13,9 @@ ITerminal terminal = new Terminal();
 IUser user = new User(terminal);
 Console.WriteLine("=========== Стартовая информация об активах пользователя ===========");
 user.GetUserBalance();
-Console.WriteLine("============= Стартовая инфомация об бменном терминале =============");
+Console.WriteLine("============= Стартовая инфомация об обменном терминале =============");
 user.GetCurrentInfo();
-Console.WriteLine("============= Доступные команды =============");
+Console.WriteLine("======================== Доступные команды =========================");
 Console.WriteLine(infoline);
 Console.WriteLine("======================== Приятных обменов) ========================");
 
@@ -60,8 +60,9 @@ do
         if (Command == "HELP")
         {
             Console.WriteLine(infoline);
+            continue;
         }
-        Console.WriteLine("Такой команды не существует."+ infoline);
+        Console.WriteLine("Такой команды не существует. "+ infoline);
         
         
     }
