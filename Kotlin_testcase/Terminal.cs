@@ -10,6 +10,7 @@ namespace Terminal_class
     class NoIncreaseCaurrency : Exception { };
     class NoDecreaseCaurrency : Exception { };
     class NotEnougthMoney : Exception { };
+    class NegativeExchange : Exception { };
     public interface ITerminal
     {
         public float ExchangeMoney(string increaseCurrency, string DecreaseCurrency, float money);
@@ -77,6 +78,10 @@ namespace Terminal_class
         }
         public float ExchangeMoney(string increaseCurrency, string DecreaseCurrency, float money)
         {
+            if (money < 0 )
+            {
+                throw new NegativeExchange();
+            }
             if (!_currencies.ContainsKey(DecreaseCurrency))
             {
                 throw new NoDecreaseCaurrency();
