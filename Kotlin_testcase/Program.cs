@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
+// add a little comment
 using User_class;
 using Terminal_class;
 
