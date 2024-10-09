@@ -121,6 +121,7 @@ namespace Terminal_class
                 curr.GetCurrencyInfo();
             }
         }
+        //Big fun
         public void ChangeAll()
         {
             ChangeEUR_RUBRate();
